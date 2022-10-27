@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //This function is called when the user clicks on the calcGPA button
+        function calcGPA()
+        {
+            //Extract the values from the HTML inputs by their assigned id and assigns them to variables
+            //The value extracted is converted from a string to a float/decimal
+            fIS201 = parseFloat(document.getElementById("is201Grade").value);
+            fACC200 = parseFloat(document.getElementById("acc200Grade").value);
+            fIS303= parseFloat(document.getElementById("is303Grade").value);
+            fOverallGPA = parseFloat(document.getElementById("overallGPA").value);
+            fLast30GPA = parseFloat(document.getElementById("last30GPA").value);
+            fEssay = parseInt(document.getElementById("essay").value);
+            //calculates new gpa
+            fFinalGPA = ((fIS201 * .3) + (fIS303 * .3) + (fACC200 * .05) + (fOverallGPA * .12) + (fLast30GPA * .18) + (fEssay * .05)).toFixed(2);
+            //Display the calculated GPA to the HTML label named "coreGPA"
+            document.getElementById("coreGPA").innerHTML = "Core GPA is " + fFinalGPA;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <!--insert html tags -->
+        <button type="button" onclick="calcGPA()">Calculate GPA</button>
+        <!--insert html tag for displaying the calcualted GPA -->
+<!------------------------------------------------------------------------------>
+        <!--Ashley Trying out this project-->
+        <!--HOW WILL THE PEOPLE INPUT IN THE INFORMATION-->
+<h1>Please fill this out.</h1>
+<form action="/action_page.php">
+  <label for="fname">Pleaes enter your first name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Please enter your last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="overallGPA">Please enter your overall GPA: </label>
+  <input type="text" id="overallGPA" name="overallGPA"><br><br>
+<!--HOW WILL THE PEOPLE INPUT IN THE INFORMATION BUT WITH -->
+<form>
+<br> <br>
+    <label for="acc200Grade">Please enter your Accounting 200 grade: </label>
+    <select name="acc200Grade" id="acc200Grade" >
+    <option value = "select">Select</option>
+    <option value="A">A</option>
+    <option value="B+">B+</option>
+    <option value="B">B</option>
+    <option value="B-">B-</option>
+    <option value="C+">C+</option>
+    <option value="C">C</option>
+    <option value="C-">C-</option>
+    <option value="D+">D+</option>
+    <option value="D">D</option>
+    <option value="D-">D-</option>
+    <option value="F">F</option>
+    </select>
+<br> <br>
+<label for="is201Grade">Please enter your IS 201 grade: </label>
+<select name="is201Grade" id="is201Grade" >
+<option value = "select">Select</option>
+<option value="A">A</option>
+<option value="B+">B+</option>
+<option value="B">B</option>
+<option value="B-">B-</option>
+<option value="C+">C+</option>
+<option value="C">C</option>
+<option value="C-">C-</option>
+<option value="D+">D+</option>
+<option value="D">D</option>
+<option value="D-">D-</option>
+<option value="F">F</option>
+</select>
+<br> <br>
+<label for="is303Grade">Please enter your IS 303 grade: </label>
+<select name="is303Grade" id="is303Grade" >
+<option value = "select">Select</option>
+<option value="A">A</option>
+<option value="B+">B+</option>
+<option value="B">B</option>
+<option value="B-">B-</option>
+<option value="C+">C+</option>
+<option value="C">C</option>
+<option value="C-">C-</option>
+<option value="D+">D+</option>
+<option value="D">D</option>
+<option value="D-">D-</option>
+<option value="F">F</option>
+</select>
+<br> <br>
+<label for="is303Grade">Please enter your essay ranking: </label>
+<select name="essay" id="essay" >
+<option value = "select">Select</option>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+</form>
+  <input type="submit" value="Submit">
+</form>
+<!-- THE BUTTON TO CALCULATE GPA-->
+<button type="button" onclick="calculteGPA">Calculate GPA</button>
+<p>Click the "Submit" button and the form-data will be sent to a page on the
+server called "action_page.php".</p>
+    </form>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //This function is called when the user clicks on the calcGPA button
+        function calcGPA()
+        {
+            //Extract the values from the HTML inputs by their assigned id and assigns them to variables
+            //The value extracted is converted from a string to a float/decimal
+            fIS201 = parseFloat(document.getElementById("is201Grade").value);
+            fACC200 = parseFloat(document.getElementById("acc200Grade").value);
+            fIS303= parseFloat(document.getElementById("is303Grade").value);
+            fOverallGPA = parseFloat(document.getElementById("overallGPA").value);
+            fLast30GPA = parseFloat(document.getElementById("last30GPA").value);
+            fEssay = parseInt(document.getElementById("essay").value);
+            //calculates new gpa
+            fFinalGPA = ((fIS201 * .3) + (fIS303 * .3) + (fACC200 * .05) + (fOverallGPA * .12) + (fLast30GPA * .18) + (fEssay * .05)).toFixed(2);
+            //Display the calculated GPA to the HTML label named "coreGPA"
+            document.getElementById("coreGPA").innerHTML = "Core GPA is " + fFinalGPA;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <!--insert html tags -->
+        <button type="button" onclick="calcGPA()">Calculate GPA</button>
+        <!--insert html tag for displaying the calcualted GPA -->
+<!------------------------------------------------------------------------------>
+        <!--Ashley Trying out this project-->
+        <!--HOW WILL THE PEOPLE INPUT IN THE INFORMATION-->
+<h1>Please fill this out.</h1>
+<form action="/action_page.php">
+  <label for="fname">Pleaes enter your first name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Please enter your last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="overallGPA">Please enter your overall GPA: </label>
+  <input type="text" id="overallGPA" name="overallGPA"><br><br>
+<!--HOW WILL THE PEOPLE INPUT IN THE INFORMATION BUT WITH -->
+<form>
+<br> <br>
+    <label for="acc200Grade">Please enter your Accounting 200 grade: </label>
+    <select name="acc200Grade" id="acc200Grade" >
+    <option value = "select">Select</option>
+    <option value="A">A</option>
+    <option value="B+">B+</option>
+    <option value="B">B</option>
+    <option value="B-">B-</option>
+    <option value="C+">C+</option>
+    <option value="C">C</option>
+    <option value="C-">C-</option>
+    <option value="D+">D+</option>
+    <option value="D">D</option>
+    <option value="D-">D-</option>
+    <option value="F">F</option>
+    </select>
+<br> <br>
+<label for="is201Grade">Please enter your IS 201 grade: </label>
+<select name="is201Grade" id="is201Grade" >
+<option value = "select">Select</option>
+<option value="A">A</option>
+<option value="B+">B+</option>
+<option value="B">B</option>
+<option value="B-">B-</option>
+<option value="C+">C+</option>
+<option value="C">C</option>
+<option value="C-">C-</option>
+<option value="D+">D+</option>
+<option value="D">D</option>
+<option value="D-">D-</option>
+<option value="F">F</option>
+</select>
+<br> <br>
+<label for="is303Grade">Please enter your IS 303 grade: </label>
+<select name="is303Grade" id="is303Grade" >
+<option value = "select">Select</option>
+<option value="A">A</option>
+<option value="B+">B+</option>
+<option value="B">B</option>
+<option value="B-">B-</option>
+<option value="C+">C+</option>
+<option value="C">C</option>
+<option value="C-">C-</option>
+<option value="D+">D+</option>
+<option value="D">D</option>
+<option value="D-">D-</option>
+<option value="F">F</option>
+</select>
+<br> <br>
+<label for="is303Grade">Please enter your essay ranking: </label>
+<select name="essay" id="essay" >
+<option value = "select">Select</option>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+</form>
+  <input type="submit" value="Submit">
+</form>
+<!-- THE BUTTON TO CALCULATE GPA-->
+<button type="button" onclick="calculteGPA">Calculate GPA</button>
+<p>Click the "Submit" button and the form-data will be sent to a page on the
+server called "action_page.php".</p>
+    </form>
+</body>
+</html>
